@@ -5,6 +5,11 @@ import sys
 from get_audio import *
 from get_info import *
 
+"""
+nuitka打包脚本
+python -m nuitka --output-dir=dist --remove-output --output-file=biliMusic --onefile  main.py
+
+"""
 
 def delete_temp():
     # 清理临时文件
@@ -21,13 +26,18 @@ try:
 except IndexError:
     bvid = url2bv(input("请输入视频链接："))
 print("尝试获取视频信息...")
+headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+        'Referer': f'https://www.bilibili.com/video/{bvid}',
+        'Origin': 'https://www.bilibili.com'
+    }
 title, author, pic = get_video_info(bvid)
 if title and author and pic:
     if title2musicTitle(title):
         title = title2musicTitle(title)
     else:
         title = input("无法从视频标题中获取音乐标题，请手动输入（无输入则使用视频标题）：")
-        if not title:
+        if title == "":
             title = title
     print("获取成功！")
     print(f"""
@@ -55,7 +65,7 @@ if audio_url:
     print("尝试下载音频...")
     try:
         with open(f"temp.m4a", 'wb') as f:
-            f.write(requests.get(audio_url).content)
+            f.write(requests.get(audio_url, headers=headers).content)
         print("下载成功！")
     except Exception as e:
         print(f"下载失败：{e}")
