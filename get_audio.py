@@ -19,7 +19,9 @@ def get_audio_download_url(bvid):
         cid = data['pages'][0]['cid']
 
         # 获取音频文件url
+        print(f"音频索引链接：http://api.bilibili.com/x/player/playurl?fnval=16&bvid={bvid}&cid={cid}")
         audio_res = requests.get(f"http://api.bilibili.com/x/player/playurl?fnval=16&bvid={bvid}&cid={cid}", headers=headers).json()
+
 
         audio_url = audio_res['data']['dash']['audio'][0]['baseUrl']
 

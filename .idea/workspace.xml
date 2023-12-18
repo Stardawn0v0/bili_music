@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e76b42e-823d-4adc-af51-8f6e5944ec8e" name="更改" comment="基本功能做完了">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    <list default="true" id="2e76b42e-823d-4adc-af51-8f6e5944ec8e" name="更改" comment="在获取不到音乐名时手动输入">
+      <change afterPath="$PROJECT_DIR$/batch_download.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="get_information" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bilibili_music" />
       <option name="ENV_FILES" value="" />
@@ -154,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702917056948</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="在获取不到音乐名时手动输入">
+      <option name="closed" value="true" />
+      <created>1702917800421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702917800421</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,17 +179,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="这是一个开始" />
     <MESSAGE value="基本功能做完了" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本功能做完了" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="在获取不到音乐名时手动输入" />
+    <option name="LAST_COMMIT_MESSAGE" value="在获取不到音乐名时手动输入" />
   </component>
 </project>

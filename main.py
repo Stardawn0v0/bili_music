@@ -1,13 +1,25 @@
-import subprocess
 import os
+import subprocess
 import sys
-from get_info import *
+
 from get_audio import *
-import requests
+from get_info import *
 
 
+def delete_temp():
+    # 清理临时文件
+    try:
+        os.remove('temp.m4a')
+        os.remove('temp.jpg')
+        print("临时文件已清理。")
+    except OSError as e:
+        print(f"清理临时文件时出错：{e}")
 
-bvid = url2bv(input("请输入视频链接："))
+
+try:
+    bvid = sys.argv[1]
+except IndexError:
+    bvid = url2bv(input("请输入视频链接："))
 print("尝试获取视频信息...")
 title, author, pic = get_video_info(bvid)
 if title and author and pic:
@@ -64,7 +76,7 @@ ffmpeg_command = [
     '-i', 'temp.jpg',  # 封面图片
     '-map', '0:0',  # 映射音频流
     '-map', '1:0',  # 映射封面图片流
-    '-metadata', f'title={title2musicTitle(title)}',  # 设置标题
+    '-metadata', f'title={title}',  # 设置标题
     '-metadata', f'artist={author}',  # 设置作者
     '-id3v2_version', '3',  # 设置ID3标签版本
     '-codec:v', 'copy',  # 复制视频流（在这里是封面图片）
@@ -79,14 +91,10 @@ try:
     print("转换成功！")
 except subprocess.CalledProcessError as e:
     print(f"转换失败：{e}")
+    delete_temp()
+    os.remove(output_mp3)
     sys.exit(1)
 
-# 清理临时文件
-try:
-    os.remove('temp.m4a')
-    os.remove('temp.jpg')
-    print("临时文件已清理。")
-except OSError as e:
-    print(f"清理临时文件时出错：{e}")
+delete_temp()
 
 print(f"完成！已保存为：{output_mp3}")
