@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e76b42e-823d-4adc-af51-8f6e5944ec8e" name="更改" comment="这是一个开始">
-      <change afterPath="$PROJECT_DIR$/get_audio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_info.py" afterDir="false" />
+    <list default="true" id="2e76b42e-823d-4adc-af51-8f6e5944ec8e" name="更改" comment="基本功能做完了">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
 }]]></component>
@@ -40,7 +43,7 @@
     "Python.get_info.executor": "Debug",
     "Python.get_information.executor": "Run",
     "Python.get_subtitle.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
@@ -143,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702908420761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="基本功能做完了">
+      <option name="closed" value="true" />
+      <created>1702917056948</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702917056948</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,15 +170,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="这是一个开始" />
-    <option name="LAST_COMMIT_MESSAGE" value="这是一个开始" />
+    <MESSAGE value="基本功能做完了" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本功能做完了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/get_info.py</url>
+          <url>file://$PROJECT_DIR$/main.py</url>
           <line>12</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

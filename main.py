@@ -11,9 +11,15 @@ bvid = url2bv(input("请输入视频链接："))
 print("尝试获取视频信息...")
 title, author, pic = get_video_info(bvid)
 if title and author and pic:
+    if title2musicTitle(title):
+        title = title2musicTitle(title)
+    else:
+        title = input("无法从视频标题中获取音乐标题，请手动输入（无输入则使用视频标题）：")
+        if not title:
+            title = title
     print("获取成功！")
     print(f"""
-标题: {title2musicTitle(title)}
+标题: {title}
 作者: {author}
 封面: {pic}
 """)
@@ -48,7 +54,7 @@ else:
 
 print("聚合已有资源...")
 # 设置输出文件名，这里使用视频标题作为文件名，并去除非法字符
-output_file_name = "".join(x for x in title2musicTitle(title) if x.isalnum() or x in [" ", "-", "_"])
+output_file_name = "".join(x for x in title if x.isalnum() or x in [" ", "-", "_"])
 output_mp3 = f"{output_file_name}.mp3"
 
 # FFmpeg命令行参数
@@ -62,6 +68,7 @@ ffmpeg_command = [
     '-metadata', f'artist={author}',  # 设置作者
     '-id3v2_version', '3',  # 设置ID3标签版本
     '-codec:v', 'copy',  # 复制视频流（在这里是封面图片）
+    '-y',
     output_mp3
 ]
 

@@ -32,8 +32,9 @@ def get_video_info(bv):
 def title2musicTitle(title):
     if '《' in title and '》' in title:
         title = re.findall('《(.*?)》', title, re.S)[0]
+        return title
 
-    return title
+    return False
 
 if __name__ == '__main__':
     bv = url2bv("https://www.bilibili.com/bangumi/play/ep718308")
