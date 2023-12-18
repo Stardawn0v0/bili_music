@@ -13,3 +13,9 @@
 安装ffmpeg并将其添加至PATH
 
 运行main.py
+
+# TODO
+
+支持下载大会员音频（HiRes）
+
+批量下载
